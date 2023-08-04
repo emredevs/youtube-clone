@@ -1,11 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Trend, TrendingGet } from "@/types/trending-video/type";
-
+import styles from "./styles.module.css";
+import Link from "next/link";
 export default function YoutubeVideos() {
-  const [playlistData, setPlaylistData] = useState<Trend[]>([]);
-
+  const [playlistData, setPlaylistData] = useState([]);
   useEffect(() => {
     const options = {
       method: "GET",
@@ -19,7 +18,7 @@ export default function YoutubeVideos() {
       },
     };
     axios
-      .get<TrendingGet>(options.url, {
+      .get(options.url, {
         params: options.params,
         headers: options.headers,
       })
@@ -29,11 +28,13 @@ export default function YoutubeVideos() {
   console.log(playlistData);
 
   return (
-    <div>
+    <div className={styles.videoContainer}>
       {playlistData.map((playlistData, index) => (
-        <div key={index}>
-          <img src={playlistData.thumbnail[0].url} alt="" />
-          <div>{playlistData.title}</div>
+        <div className={styles.videoBox} key={index}>
+          <Link href={"/"}>
+            <img src={playlistData.thumbnail[0].url} alt="" />
+            <div>{playlistData.title}</div>
+          </Link>
         </div>
       ))}
     </div>

@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import "./Sidebar.css";
-import HomeIcon from "@mui/icons-material/Home";
-import { Menu } from "../../sidebarInfo";
 import Link from "next/link";
+import { Menu } from "@/sidebarInfo";
+import MenuIcon from "@mui/icons-material/Menu";
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -15,20 +15,18 @@ export default function Sidebar() {
     <div className="sidebarContainer">
       <div>
         <button className="toggle-button" onClick={toggleSidebar}>
-          {isOpen ? "Close Menu" : "Open Menu"}
+          {isOpen ? <MenuIcon /> : <MenuIcon />}
         </button>
         <div className={`sidebar ${isOpen ? "open" : ""}`}>
           <ul className="menu">
-            {Menu.map(
-              (info: { name: string; icon: Element }, index: number) => {
-                <li key={index}>
-                  <Link href={"/"}>
-                    {info.name}
-                    {info.icon}
-                  </Link>
-                </li>;
-              }
-            )}
+            {Menu.map((menu, index) => (
+              <li key={index}>
+                <Link href={"/"}>
+                  <span> {menu.icon}</span>
+                  <span>{menu.name}</span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
