@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
 import Link from "next/link";
-import { Menu } from "@/sidebarInfo";
+import { Menu } from "../../sidebar";
 import MenuIcon from "@mui/icons-material/Menu";
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);

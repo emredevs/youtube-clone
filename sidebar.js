@@ -1,0 +1,28 @@
+import HomeIcon from "@mui/icons-material/Home";
+import TimelineIcon from "@mui/icons-material/Timeline";
+export const Menu = [
+  { name: "ana_sayfa", icon: <HomeIcon /> },
+  { name: "shorts", icon: <TimelineIcon /> },
+  { name: "abonelikler", icon: <HomeIcon /> },
+  { name: "kitaplik", icon: <HomeIcon /> },
+  { name: "gecmis", icon: <HomeIcon /> },
+  { name: "videolar_begen", icon: <HomeIcon /> },
+  { name: "yorum_yap", icon: <HomeIcon /> },
+  { name: "abone_ol", icon: <HomeIcon /> },
+  { name: "oturum_ac", icon: <HomeIcon /> },
+  { name: "kesfet", icon: <HomeIcon /> },
+  { name: "trendler", icon: <HomeIcon /> },
+  { name: "muzik", icon: <HomeIcon /> },
+  { name: "canli", icon: <HomeIcon /> },
+  { name: "oyun", icon: <HomeIcon /> },
+  { name: "spor", icon: <HomeIcon /> },
+  { name: "kanallar", icon: <HomeIcon /> },
+  { name: "daha_fazla_icerik", icon: <HomeIcon /> },
+  { name: "premium", icon: <HomeIcon /> },
+  { name: "muzik", icon: <HomeIcon /> },
+  { name: "cocuklar", icon: <HomeIcon /> },
+  { name: "ayarlar", icon: <HomeIcon /> },
+  { name: "icerik_bildirme_gecmisi", icon: <HomeIcon /> },
+  { name: "yardim", icon: <HomeIcon /> },
+  { name: "geri_bildirim", icon: <HomeIcon /> },
+];
