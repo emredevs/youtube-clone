@@ -8,9 +8,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
-.headerContainer > div > span {
+.headerContainer>a>div>span {
   font-weight: 700;
   font-size: x-large;
 }

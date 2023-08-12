@@ -21,7 +21,7 @@ export default function Sidebar() {
           <ul className="menu">
             {Menu.map((menu, index) => (
               <li key={index}>
-                <Link href={"/"}>
+                <Link href={`${menu.link}`}>
                   <span> {menu.icon}</span>
                   <span>{menu.name}</span>
                 </Link>
@@ -29,6 +29,29 @@ export default function Sidebar() {
             ))}
           </ul>
         </div>
+      </div>
+      <div
+        style={{ position: "fixed", top: "10vh", left: "5px", zIndex: "-1" }}
+      >
+        {Menu.slice(0, 5).map((menu, index) => (
+          <div key={index}>
+            <Link href={`${menu.link}`}>
+              <span
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  fontSize: "12px",
+                  marginBottom: "30px",
+                }}
+              >
+                {menu.icon}
+                {menu.name}
+              </span>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

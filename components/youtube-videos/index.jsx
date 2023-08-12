@@ -33,7 +33,17 @@ export default function YoutubeVideos() {
         <div className={styles.videoBox} key={index}>
           <Link href={"/"}>
             <img src={playlistData.thumbnail[0].url} alt="" />
-            <div>{playlistData.title}</div>
+            <div className={styles.chanelInfo}>
+              <img src={playlistData.channelThumbnail[0]?.url} alt="" />
+              <div>
+                <div>
+                  <b>{playlistData.title}</b>
+                </div>
+                <div>{playlistData.channelTitle}</div>
+                <span>{playlistData.viewCount.slice(0, 3)}M views</span>{" "}
+                <span>{playlistData.publishedText}</span>
+              </div>
+            </div>
           </Link>
         </div>
       ))}
