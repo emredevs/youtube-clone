@@ -1,0 +1,88 @@
+.videoDetail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2%;
+}
+
+.video {
+    width: 70%;
+}
+
+.otherVideo {
+    width: 30%;
+    height: 100%;
+    /* background-color: rgb(110, 34, 34); */
+}
+
+.chanelBtnsBox {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: bisque; */
+}
+
+.chanelBtns {
+    width: 50%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chanelBtns>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.chanelBtns>div>button {
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 400;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.chanelBtns>div>button:first-child {
+    background-color: black;
+    color: white;
+}
+
+.chanelBtns>div>button:first-child:hover {
+    background-color: grey;
+
+}
+
+.chanelBtns>div>button:last-child {
+    background-color: white;
+    color: black;
+}
+
+.chanelBtns>div>button:last-child:hover {
+    background-color: rgb(218, 218, 218);
+
+}
+
+.userInteraction {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.userInteraction>button {
+    color: white;
+    background-color: rgb(55, 56, 56);
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 400;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.userInteraction>button:hover {
+    background-color: rgb(190, 189, 189);
+}

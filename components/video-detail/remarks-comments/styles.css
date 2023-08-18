@@ -1,0 +1,19 @@
+.remarksBox {
+    margin-top: 25px;
+    background-color: rgb(70, 69, 69);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.remarksBox:hover {
+    background-color: rgb(110, 110, 110);
+}
+
+.btn {
+
+    background-color: transparent;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+
+}

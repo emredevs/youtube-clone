@@ -4,23 +4,33 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 10% 2%;
+    margin: 8% 2%;
 }
 .videoBox {
     width: 23%;
-      height: 35vh;
+      height: 32vh;
 }
 .videoBox > a > img {
   width: 100%;
   height: 20vh;
   border-radius: 20px;
+  transition: 1s;
 }
-
+.videoBox>a>img:hover {
+  transition: 1s;
+  border-radius: 0px;
+}
 .chanelInfo {
+    height: 12vh;
   display: flex;
   gap: 20px;
-}
 
+}
+.chanelInfo div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .chanelInfo>img {
   width: 40px;
   height: 40px;

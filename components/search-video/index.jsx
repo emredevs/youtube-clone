@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import styles from "../youtube-videos/styles.module.css";
+import styles from "./styles.module.css";
 import Link from "next/link";
 export default function SearchVideos({ params }) {
   const [searchVideo, setSearchVideo] = useState([]);
@@ -28,9 +28,30 @@ export default function SearchVideos({ params }) {
     <div className={styles.videoContainer}>
       {searchVideo.map((searchVideo, index) => (
         <div className={styles.videoBox} key={index}>
-          <Link href={"/"}>
+          <Link href={`/detail/${searchVideo.videoId}`}>
             <img src={searchVideo.thumbnail[0].url} alt="" />
-            <div>{searchVideo.title}</div>
+            <div>
+              <h3>{searchVideo.title}</h3>
+              <div
+                style={{ fontSize: "small", color: "grey", marginTop: "10px" }}
+              >
+                {searchVideo?.viewCount && (
+                  <span>{searchVideo.viewCount.slice(0, 3)}M views</span>
+                )}
+              </div>
+              <div className={styles.channelInfo}>
+                {searchVideo?.channelThumbnail?.[0]?.url && (
+                  <img src={searchVideo.channelThumbnail[0]?.url} alt="" />
+                )}
+                <div>{searchVideo.channelTitle}</div>
+              </div>
+
+              <p
+                style={{ fontSize: "small", color: "grey", marginTop: "10px" }}
+              >
+                {searchVideo.description}
+              </p>
+            </div>
           </Link>
         </div>
       ))}

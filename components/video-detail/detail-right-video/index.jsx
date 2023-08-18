@@ -25,29 +25,26 @@ export default function YoutubeVideos() {
       .then((res) => setPlaylistData(res.data.data.slice(0, 10)));
   }, []);
 
-  console.log(playlistData);
-
   return (
     <div className={styles.videoContainer}>
       {playlistData.map((playlistData, index) => (
         <div className={styles.videoBox} key={index}>
           <Link href={`/detail/${playlistData.videoId}`}>
-            <img src={playlistData.thumbnail[0].url} alt="" />
-            <span
-              style={{
-                backgroundColor: "rgb(49, 48, 48)",
-                borderRadius: "5px",
-                position: "relative",
-                bottom: "30px",
-                left: "80%",
-
-                padding: "2px",
-              }}
-            >
-              {playlistData.lengthText}
-            </span>
+            <div>
+              <img src={playlistData.thumbnail[0].url} alt="" />
+              <span
+                style={{
+                  backgroundColor: "rgb(49, 48, 48)",
+                  borderRadius: "5px",
+                  position: "relative",
+                  bottom: "30px",
+                  left: "70%",
+                }}
+              >
+                {playlistData.lengthText}
+              </span>
+            </div>
             <div className={styles.chanelInfo}>
-              <img src={playlistData.channelThumbnail[0]?.url} alt="" />
               <div>
                 <div>
                   <b>{playlistData.title}</b>

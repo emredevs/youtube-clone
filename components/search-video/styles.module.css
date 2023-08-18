@@ -1,0 +1,51 @@
+.videoContainer {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 7% auto;
+
+}
+
+.videoBox {
+    width: 80%;
+    height: 30vh;
+}
+
+.videoBox>a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5%;
+}
+
+.videoBox>a>img {
+    width: 33%;
+    height: 28vh;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.videoBox>a>img:hover {
+    transition: 1s;
+    border-radius: 0px;
+}
+
+.channelInfo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: small;
+    color: grey;
+    margin: 10px 0px;
+}
+
+.channelInfo>img {
+    margin-top: -3px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
