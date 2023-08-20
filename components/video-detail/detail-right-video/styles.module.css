@@ -11,7 +11,6 @@
 .videoBox {
   width: 100%;
   height: auto;
-
 }
 
 .videoBox>a {
@@ -19,17 +18,14 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 5%;
-
 }
 
 .videoBox>a>div>img {
   width: 20vh;
   height: 15vh;
   border-radius: 10px;
-    /* transition: 1s; */
+  /* transition: 1s; */
 }
-
-
 
 /* .videoBox>a>div>img:hover {
   transition: 1s;
@@ -55,11 +51,9 @@
   bottom: 30px;
   left: 14vh;
   right: 0px;
-
 }
 
-@media(max-width:1000px) {
-
+@media (max-width: 1000px) {
   .timeInfo {
     left: 20vh;
     right: 0px;
@@ -68,12 +62,15 @@
     font-size: small;
   }
 
-  .videoBox>a {
+        .videoBox>a {
     gap: 2%;
   }
 
-  .videoBox>a>div>img {
+        .videoBox>a>div>img {
     width: 25vh;
     height: 15vh;
   }
+        .chanelInfo {
+          width: 40%;
+        }
 }

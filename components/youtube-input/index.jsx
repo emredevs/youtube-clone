@@ -5,9 +5,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import CloseIcon from "@mui/icons-material/Close";
 import styles from "./styles.module.css";
 export default function YoutubeInput() {
   const [search, setSearch] = useState("");
+  const [open, setOpen] = useState(false);
   const router = useRouter();
   const formSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ export default function YoutubeInput() {
       <form onSubmit={formSubmit} className={styles.searchContainer}>
         <div className={styles.searchBox}>
           <input
+            className={styles.searchInput}
             type="text"
             placeholder="Search"
             onChange={(e) => setSearch(e.target.value)}
@@ -32,6 +35,18 @@ export default function YoutubeInput() {
           <KeyboardVoiceIcon />
         </div>
         <div>
+          <div className={styles.responsiveInput}>
+            {open && (
+              <input
+                className={styles.searchInput}
+                type="text"
+                placeholder="Search"
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            )}
+            {!open && <SearchIcon onClick={() => setOpen(true)} />}
+            {open && <CloseIcon onClick={() => setOpen(false)} />}
+          </div>
           <MoreVertOutlinedIcon />
           <AccountCircleOutlinedIcon />
         </div>
