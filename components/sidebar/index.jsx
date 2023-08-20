@@ -37,16 +37,7 @@ export default function Sidebar() {
           Menu.slice(0, 5).map((menu, index) => (
             <div key={index}>
               <Link href={`/${menu.link}`}>
-                <span
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexDirection: "column",
-                    fontSize: "12px",
-                    marginBottom: "30px",
-                  }}
-                >
+                <span className="miniSidebar">
                   {menu.icon}
                   {menu.name}
                 </span>

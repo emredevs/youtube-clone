@@ -5,13 +5,32 @@
   right: 0px;
   left: 0px;
   z-index: 1;
-  margin-left: 4%;
+width: auto;
+  margin: 0 auto 0 5%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background-color: rgb(15, 15, 15);
+  flex-wrap: nowrap;
 }
 .headerContainer>a>div>span {
   font-weight: 700;
-  font-size: x-large;
-}
+  font-size: large;
+  }
+  
+  .headerContainer>a>div {
+    display: flex;
+  }
+  
+  @media (max-width: 1000px) {
+    .headerContainer {
+      padding-left: 5%;
+      /* margin-left: 8%; */
+    }
+  
+    .headerContainer>a>div>span {
+      font-weight: 500;
+      font-size: large;
+    }
+  }
+  

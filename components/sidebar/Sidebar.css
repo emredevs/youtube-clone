@@ -66,11 +66,21 @@
   border-bottom: none;
 }
 
-.categoriesSideBar {
+.miniSidebar {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1124px) {
 }
 
-@media (max-width: 1055px) {
+@media (max-width: 800px) {
+  .miniSidebar {
+    display: none;
+  }
 }

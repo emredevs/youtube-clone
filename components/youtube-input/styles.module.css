@@ -12,7 +12,7 @@
 }
 .searchBox > input {
   padding: 10px;
-  width: 55vh;
+  width: 90%;
   height: 5vh;
   background-color: rgb(46, 44, 44);
   color: white;
@@ -45,4 +45,26 @@
 }
 .searchBox > *:last-child:hover {
   background-color: rgb(195, 195, 201);
+}
+.searchContainer>div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media (max-width: 1000px) {
+  .searchContainer {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .searchBox>input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  .searchBox>input {
+    width: 50%;
+  }
 }

@@ -10,7 +10,7 @@
 }
 
 .btn {
-
+    cursor: pointer;
     background-color: transparent;
     color: white;
     font-weight: 900;

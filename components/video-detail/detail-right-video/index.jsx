@@ -32,17 +32,7 @@ export default function YoutubeVideos() {
           <Link href={`/detail/${playlistData.videoId}`}>
             <div>
               <img src={playlistData.thumbnail[0].url} alt="" />
-              <span
-                style={{
-                  backgroundColor: "rgb(49, 48, 48)",
-                  borderRadius: "5px",
-                  position: "relative",
-                  bottom: "30px",
-                  left: "70%",
-                }}
-              >
-                {playlistData.lengthText}
-              </span>
+              <div className={styles.timeInfo}>{playlistData.lengthText}</div>
             </div>
             <div className={styles.chanelInfo}>
               <div>

@@ -3,6 +3,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 2%;
+    margin: 5% 5%;
 }
 
 .video {
@@ -28,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .chanelBtns>div {
@@ -40,6 +42,7 @@
 .chanelBtns>div>button {
     cursor: pointer;
     font-size: medium;
+    
     font-weight: 400;
     padding: 10px 30px;
     border-radius: 20px;
@@ -85,4 +88,27 @@
 
 .userInteraction>button:hover {
     background-color: rgb(190, 189, 189);
+}
+@media(max-width:1000px) {
+    .videoDetail {
+
+        flex-direction: column;
+    }
+
+    .video {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .otherVideo {
+        width: 100%;
+    }
+
+
+}
+
+@media(max-width:800px) {
+    .videoDetail {
+        margin: 10% auto;
+    }
 }
