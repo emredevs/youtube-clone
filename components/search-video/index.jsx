@@ -20,7 +20,7 @@ export default function SearchVideos({ params }) {
         "X-RapidAPI-Host": "youtube-v3-alternative.p.rapidapi.com",
       },
     };
-    axios(options).then((res) => setSearchVideo(res.data.data.slice(0, 10)));
+    axios(options).then((res) => setSearchVideo(res.data.data.slice(0, 20)));
   }, [params]);
 
   console.log(searchVideo);

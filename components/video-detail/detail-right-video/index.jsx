@@ -22,7 +22,7 @@ export default function YoutubeVideos() {
         params: options.params,
         headers: options.headers,
       })
-      .then((res) => setPlaylistData(res.data.data.slice(0, 10)));
+      .then((res) => setPlaylistData(res.data.data.slice(0, 15)));
   }, []);
 
   return (
