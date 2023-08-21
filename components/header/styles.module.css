@@ -34,3 +34,8 @@ width: auto;
     }
   }
   
+@media (max-width: 520px) {
+  .headerContainer {
+    padding-left: 11%;
+  }
+}

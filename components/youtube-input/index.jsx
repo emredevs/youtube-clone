@@ -44,8 +44,23 @@ export default function YoutubeInput() {
                 onChange={(e) => setSearch(e.target.value)}
               />
             )}
-            {!open && <SearchIcon onClick={() => setOpen(true)} />}
-            {open && <CloseIcon onClick={() => setOpen(false)} />}
+            {!open && (
+              <SearchIcon
+                style={{ cursor: "pointer" }}
+                onClick={() => setOpen(true)}
+              />
+            )}
+            {open && (
+              <CloseIcon
+                style={{
+                  position: "absolute",
+                  top: "3.5vh",
+                  right: "7vh",
+                  cursor: "pointer",
+                }}
+                onClick={() => setOpen(false)}
+              />
+            )}
           </div>
           <MoreVertOutlinedIcon />
           <AccountCircleOutlinedIcon />
